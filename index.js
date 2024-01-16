@@ -13,13 +13,13 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
     .then(res => res.json())
     .then(data => {
         const postsArr = data.slice(0, 5)
-        let html = "<h1 class='header'>BlogSpace</h1>"
-        for (let post of postsArr) {
-            html += `
-                <h3>${post.title}</h3>
-                <p>${post.body}</p>
-                <hr />
-            `
-        }
-        document.getElementById("blog-list").innerHTML = html
+        console.log(postsArr)
+        const postsHtml = postsArr.map(post => {
+            return `
+                    <div class="post">
+                        <h2>${post.title}</h2>
+                        <p>${post.body}</p>
+                    </div>`
+        }).join('')
+        document.getElementById("posts-container").innerHTML = postsHtml
     })
