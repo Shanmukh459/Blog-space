@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+}
+.header {
+    background: lightblue;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
