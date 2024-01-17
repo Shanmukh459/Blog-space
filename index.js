@@ -1,7 +1,21 @@
+fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+    .then(res => res.json())
+    .then(data => {
+        const postsArr = data.slice(0, 5)
+        const postsHtml = postsArr.map(post => {
+            return `
+                    <div class="post">
+                        <h2>${post.title}</h2>
+                        <p>${post.body}</p>
+                    </div>`
+        }).join('')
+    document.getElementById("posts-container").innerHTML = postsHtml
+})
+
 document.querySelector("form").addEventListener("submit", function(e) {
     e.preventDefault()
-    const postTitle = document.getElementById("post-title")
-    const postBody = document.getElementById("post-body")
+    const postTitle = document.getElementById("post-title").value
+    const postBody = document.getElementById("post-body").value
     const data = {
         title: postTitle,
         body: postBody,
@@ -16,20 +30,12 @@ document.querySelector("form").addEventListener("submit", function(e) {
         }
     })
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            document.getElementById("posts-container").innerHTML += `
+                <div class="post">
+                <h2>${data.title}</h2>
+                <p>${data.body}</p>
+            </div>`   
+        })
 })
 
-fetch("https://apis.scrimba.com/jsonplaceholder/posts")
-    .then(res => res.json())
-    .then(data => {
-        const postsArr = data.slice(0, 5)
-        console.log(postsArr)
-        const postsHtml = postsArr.map(post => {
-            return `
-                    <div class="post">
-                        <h2>${post.title}</h2>
-                        <p>${post.body}</p>
-                    </div>`
-        }).join('')
-        document.getElementById("posts-container").innerHTML = postsHtml
-    })
