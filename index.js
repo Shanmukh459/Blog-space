@@ -1,13 +1,23 @@
-/**
- Challenge:
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault()
+    const postTitle = document.getElementById("post-title")
+    const postBody = document.getElementById("post-body")
+    const data = {
+        title: postTitle,
+        body: postBody,
+    }
 
- Style it up!
- 
- * Add a short (~30px height) fixed navbar at the top with the text "BlogSpace". Remember to pad the top of your content so it doesn't get hidden behind the navbar.
- * Add a font from Google Fonts.
- * Any other styling you want to make it look nice!
- 
- */
+    fetch("https://apis.scrimba.com/jsonplaceholder/posts",
+    {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(res => res.json())
+        .then(data => console.log(data))
+})
 
 fetch("https://apis.scrimba.com/jsonplaceholder/posts")
     .then(res => res.json())
