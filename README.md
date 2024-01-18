@@ -1,21 +1,31 @@
-# coe8e44ce91eef3b2e7ae2bee
+# Blog Space
 
-Quick start:
+- This application is a practice project for my API and URLs muscles 💪
+- In this app, people can add new blogs on the site
+- The blogs already displayed on the page are pulled from external server
+- Got a chance to explore the syntax of fetch in JavaScript
+- In addition, I have also learnt about the request methods, and other parameters like headers which are used while sending a request from a client to server
+- Also, learnt about the Request-Response cycle
 
-```
-$ npm install
-$ npm start
-````
+### Tech used ⚙️
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+- HTML
+- CSS
+- JavaScript
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+### Deployed at
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+- https://shanmukh-blog-space.vercel.app/
+
+### ScreenShots
+
+#### _Initial screen with placeholder blogs_
+
+- ![image](https://github.com/Shanmukh459/Blog-space/assets/52078988/253d8c8d-83d3-4914-b43d-1c5bbb6636f2)
+
+#### _After posting a new blog_
+
+- ![image](https://github.com/Shanmukh459/Blog-space/assets/52078988/fe422697-84ad-4799-80c4-da48809b3fb0)
+
 
 Happy Coding!
